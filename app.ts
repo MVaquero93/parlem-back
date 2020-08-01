@@ -1,6 +1,7 @@
 import express from 'express'
 import envConfig from './app/config/env'
 import router from './app/routes/index'
+import './app/database'
 
 const app = express()
 
