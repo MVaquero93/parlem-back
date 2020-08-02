@@ -5,7 +5,6 @@ export interface ProductModel {
     productTypeName: string,
     numeracioTerminal: number,
     soldAt: string,
-    customerId: number,
 }
 
 
@@ -24,19 +23,9 @@ const productSchema = new Schema({
     soldAt: {
         type: Date,
     },
-    customerId: {
-        type: Number,
-    },
 }, {
     timestamps: true,
 })
-
-productSchema.virtual('customer',{
-    ref: 'Customer',
-    localField: 'customerId',
-    foreignField: 'customerId',
-});
-
 
 const Product = model<ProductDocument>('Product', productSchema)
 

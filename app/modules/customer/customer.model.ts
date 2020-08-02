@@ -1,4 +1,6 @@
 import {Document, model, Schema} from 'mongoose'
+import {ProductDocument} from "../product/product.model";
+import "../product/product.model"
 
 export interface CustomerModel {
     givenName: string,
@@ -7,7 +9,7 @@ export interface CustomerModel {
     email: string,
     familyName1: string,
     phone: string,
-    customerId: number,
+    subscribedProducts: ProductDocument['_id'],
 }
 
 
@@ -32,12 +34,14 @@ const customerSchema = new Schema({
     phone: {
         type: String,
     },
-    customerId: {
-        type: Number,
-    }
+    subscribedProducts: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Product',
+    }],
 }, {
     timestamps: true,
 })
+
 
 const Customer = model<CustomerDocument>('Customer', customerSchema)
 
