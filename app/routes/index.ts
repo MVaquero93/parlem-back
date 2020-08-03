@@ -1,6 +1,5 @@
 import express from 'express'
-import productRouter from './product.route'
-import customerRouter from './customer.route'
+import apiRouter from './api/index'
 
 const router = express.Router()
 
@@ -10,8 +9,6 @@ router.get('/', (req, res) => {
     })
 })
 
-router.use('/customer', customerRouter)
-
-router.use('/product', productRouter)
+router.use('/api', apiRouter)
 
 export default router

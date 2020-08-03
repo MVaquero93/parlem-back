@@ -8,6 +8,7 @@
     "@tsed/core": "^5.61.1",
     "@types/express": "^4.17.7",
     "@types/node": "^14.0.27",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.27",
