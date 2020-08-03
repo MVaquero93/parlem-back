@@ -1,8 +1,8 @@
 # parlem-back
 
 
-## Customer table:
-{
+Customer table:
+```{
     "_id" : ObjectId("5f25f13e23ecc81bf8b603f5"),
     "docType" : "nif",
     "docNum" : "11223344E",
@@ -20,8 +20,8 @@
     "__v" : 0
 }
 
-##Product table:
-/* 1 */
+Product table:
+
 {
     "_id" : ObjectId("5f25f23a2eefb6039802f26e"),
     "productName" : "FIBRA 1000 ADAMO",
@@ -33,7 +33,6 @@
     "__v" : 0
 }
 
-/* 2 */
 {
     "_id" : ObjectId("5f25f23a2eefb6039802f26f"),
     "productName" : "FIBRA 500 TEST",
@@ -45,7 +44,7 @@
     "__v" : 0
 }
 
-/* 3 */
+
 {
     "_id" : ObjectId("5f25f23a2eefb6039802f270"),
     "productName" : "FUTBOL TV CHAMPIONS",
